@@ -1,0 +1,319 @@
+:root {
+    --bg-color: #0f172a;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Background Gradients & Blobs */
+.background-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    animation: float 20s infinite ease-in-out alternate;
+}
+
+.blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: #4f46e5;
+}
+
+.blob-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: #0ea5e9;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+/* Glassmorphism Utilities */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kanji {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Main Layout */
+main {
+    padding: 140px 5% 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 350px;
+    padding: 50px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.cta-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #38bdf8, #4f46e5);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.5);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px -10px rgba(56, 189, 248, 0.7);
+}
+
+.bmac-btn {
+    padding: 0;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 54px;
+    display: inline-block;
+}
+
+.bmac-btn img {
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.bmac-btn:hover img {
+    transform: scale(1.05);
+}
+
+/* Mockup UI */
+.hero-image {
+    flex: 1;
+    min-width: 350px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mockup {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.japanese-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+ruby {
+    ruby-position: over;
+    ruby-align: center;
+}
+
+rt {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Features */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    padding: 30px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.05);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--glass-border);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+    .japanese-text { font-size: 2rem; }
+    .hero-content { padding: 30px; }
+    .nav-links { display: none; }
+}

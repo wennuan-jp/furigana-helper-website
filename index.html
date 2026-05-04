@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furigana Helper - Master Japanese Reading</title>
+    <meta name="description" content="A non-intrusive Chrome Extension that adds phonetic furigana readings above Japanese Kanji text using a hybrid offline and cloud processing architecture.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background elements -->
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Glassmorphism Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <span class="kanji">読</span> Furigana Helper
+        </div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="https://github.com/wennuan-jp/furigana-helper" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content glass-card">
+                <div class="badge">Version 1.0.0 Now Available</div>
+                <h1>Read Japanese with <span class="highlight">Confidence</span></h1>
+                <p>A smart, privacy-first Chrome Extension that adds phonetic furigana readings above Japanese Kanji text instantly.</p>
+                <div class="cta-group">
+                    <a href="https://chrome.google.com/webstore" class="btn primary-btn">Add to Chrome - It's Free</a>
+                    
+                    <!-- Buy me a coffee button -->
+                    <a href="https://buymeacoffee.com/wennuan" target="_blank" class="btn bmac-btn">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="bmac-img">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image glass-card">
+                <div class="mockup">
+                    <p class="japanese-text">
+                        <ruby>私<rt>わたし</rt></ruby>は<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2 class="section-title">Why choose Furigana Helper?</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass-card">
+                    <div class="icon">⚡️</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Processes text instantly using an embedded offline dictionary. No waiting for cloud APIs to return data.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Works completely offline by default. Your reading habits and selected texts never leave your browser.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">☁️</div>
+                    <h3>Cloud Accuracy</h3>
+                    <p>Optional Yahoo! Japan API integration for when you need perfect contextual accuracy for complex sentences.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">🎯</div>
+                    <h3>Non-Intrusive</h3>
+                    <p>Injects native HTML5 ruby tags perfectly into the page structure without breaking modern websites.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Furigana Helper. Built with ❤️ for Japanese learners.</p>
+    </footer>
+</body>
+</html>
