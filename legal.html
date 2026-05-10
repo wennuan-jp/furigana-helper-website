@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特定商取引法に基づく表記 - Furigana Helper</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .legal-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .legal-row {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            gap: 20px;
+        }
+
+        .legal-row:last-child {
+            border-bottom: none;
+        }
+
+        .legal-label {
+            font-weight: 700;
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+
+        .legal-value {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .legal-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .legal-container {
+                margin: 2rem 5%;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">
+            <span class="kanji">読</span> Furigana Helper
+        </div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="legal-container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>特定商取引法に基づく表記</h1>
+
+            <div class="legal-row">
+                <div class="legal-label">販売業者 / Distributor</div>
+                <div class="legal-value">Wen Nuan(オン　ダン)</div>
+            </div>
+
+            <div class="legal-row">
+                <div class="legal-label">連絡先 / Contact</div>
+                <div class="legal-value">
+                    wennuan.jp@gmail.com
+                </div>
+            </div>
+
+            <div class="legal-row">
+                <div class="legal-label">所在地・電話番号 / Address & Phone</div>
+                <div class="legal-value">
+                    請求により遅滞なく提供します。<br>
+                    (Will be provided upon request without delay.)
+                </div>
+            </div>
+
+            <div class="legal-row">
+                <div class="legal-label">サービス提供時期 / Delivery Time</div>
+                <div class="legal-value">
+                    ブラウザ拡張機能のインストール後、直ちに提供されます。<br>
+                    (Immediately after installation of the Chrome Extension.)
+                </div>
+            </div>
+
+            <div class="legal-row">
+                <div class="legal-label">販売価格 / Price</div>
+                <div class="legal-value">
+                    無料（任意による寄付・支援のみ受け付けております）<br>
+                    (Free. We only accept voluntary support/donations.)
+                </div>
+            </div>
+
+            <div class="legal-row">
+                <div class="legal-label">返品・返金ポリシー / Refund Policy</div>
+                <div class="legal-value">
+                    本ソフトウェアは無料であり、支払いは任意的な支援（寄付）であるため、返金は受け付けておりません。<br>
+                    (Since the software is free and payments are voluntary support, no refunds are provided.)
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Furigana Helper. 特定商取引法に基づく表記</p>
+    </footer>
+</body>
+
+</html>
