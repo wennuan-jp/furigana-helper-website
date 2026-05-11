@@ -1,13 +1,13 @@
 /* style.css - Icon-inspired Theme (Blue/Teal) */
 :root {
-    --primary: #4facfe;
-    --primary-light: #a6d9ff;
-    --secondary: #00f2fe;
-    --bg-warm: #f0f9ff;
+    --primary: #2563eb;
+    --primary-light: #60a5fa;
+    --secondary: #3b82f6;
+    --bg-warm: #f8fafc;
     --bg-card: #ffffff;
-    --text-main: #2c3e50;
-    --text-muted: #5d6d7e;
-    --shadow: 0 10px 30px rgba(79, 172, 254, 0.15);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
     --radius: 24px;
 }
 
@@ -145,12 +145,27 @@ body {
     color: var(--primary);
 }
 
+.nav-bmac {
+    display: flex;
+    align-items: center;
+}
+
+.bmac-img-nav {
+    height: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.bmac-img-nav:hover {
+    transform: scale(1.05);
+}
+
 /* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6rem 5%;
+    padding: 6rem 5% 4rem;
     max-width: 1200px;
     margin: 0 auto;
     gap: 60px;
@@ -182,6 +197,7 @@ h1 {
 .highlight {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
 }
@@ -199,6 +215,16 @@ h1 {
     flex-wrap: wrap;
 }
 
+.install-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 100;
+}
+
 .btn {
     padding: 16px 32px;
     border-radius: 50px;
@@ -211,15 +237,31 @@ h1 {
 }
 
 .primary-btn {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     color: white;
-    box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+    padding: 18px 40px;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
 
 .primary-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(79, 172, 254, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.4);
+    background: #1d4ed8;
 }
+
+.primary-btn:active {
+    transform: translateY(-1px);
+}
+
+
 
 .bmac-img {
     height: 54px;
@@ -271,7 +313,7 @@ ruby rt {
 
 /* Features */
 .features {
-    padding: 8rem 5%;
+    padding: 6rem 5% 8rem;
     max-width: 1200px;
     margin: 0 auto;
 }
